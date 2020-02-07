@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+
+* Author: Taylor Olson
+
+* Class name: ChiliCheeseFries.cs
+
+* Purpose: The attributes for the menu item "Chili Cheese Fries"
+
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

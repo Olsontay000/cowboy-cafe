@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+
+* Author: Taylor Olson
+
+* Class name: TrailBurger.cs
+
+* Purpose: The attributes for the menu item "Trail Burger"
+
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

@@ -1,4 +1,15 @@
-﻿using System;
+﻿/*
+
+* Author: Nathan Bean
+
+* Edited by: Taylor Olson
+
+* Class name: CowpokeChili.cs
+
+* Purpose: The attributes for the menu item "Cowpoke Chili"
+
+*/
+using System;
 using System.Collections.Generic;
 
 namespace CowboyCafe.Data

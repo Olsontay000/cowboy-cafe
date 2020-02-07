@@ -1,4 +1,15 @@
-﻿using System;
+﻿/*
+
+* Author: Nathan Bean
+
+* Edited by: Taylor Olson
+
+* Class name: Side.cs
+
+* Purpose: A class for a Side object and the default values
+
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

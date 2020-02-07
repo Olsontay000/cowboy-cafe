@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+
+* Author: Taylor Olson
+
+* Class name: TexasTripleBurger.cs
+
+* Purpose: The attributes for the menu item "Texas Triple Burger"
+
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

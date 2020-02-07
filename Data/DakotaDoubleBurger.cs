@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+
+* Author: Taylor Olson
+
+* Class name: DakotaDoubleBurger.cs
+
+* Purpose: The attributes for the menu item "Dakota Double Burger"
+
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

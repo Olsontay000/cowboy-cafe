@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+
+* Author: Taylor Olson
+
+* Class name: AngryChicken.cs
+
+* Purpose: The attributes for the menu item "Angry Chicken"
+
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

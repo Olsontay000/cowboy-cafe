@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+
+* Author: Taylor Olson
+
+* Class name: RustlersRibs.cs
+
+* Purpose: The attributes for the menu item "Rustler's Ribs"
+
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 
