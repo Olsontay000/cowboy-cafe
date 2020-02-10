@@ -16,66 +16,67 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A class representing the Texas Triple Burger entree
     /// </summary>
-    public class TexasTripleBurger
+    public class TexasTripleBurger : Entree
     {
+        
         /// <summary>
         /// If the Texas Triple Burger is served with bun
         /// </summary>
-        public bool Bun { get; set; } = true;
+        public override bool Bun { get; set; } = true;
         /// <summary>
         /// If the Texas Triple Burger is served with ketchup
         /// </summary>
-        public bool Ketchup { get; set; } = true;
+        public override bool Ketchup { get; set; } = true;
         /// <summary>
         /// If the Texas Triple Burger is served with mustard
         /// </summary>
-        public bool Mustard { get; set; } = true;
+        public override bool Mustard { get; set; } = true;
         /// <summary>
         /// If the Texas Triple Burger is served with pickle
         /// </summary>
-        public bool Pickle { get; set; } = true;
+        public override bool Pickle { get; set; } = true;
         /// <summary>
         /// If the Texas Triple Burger is served with cheese
         /// </summary>
-        public bool Cheese { get; set; } = true;
+        public override bool Cheese { get; set; } = true;
         /// <summary>
         /// If the Texas Triple Burger is served with tomato
         /// </summary>
-        public bool Tomato { get; set; } = true;
+        public override bool Tomato { get; set; } = true;
         /// <summary>
         /// If the Texas Triple Burger is served with lettuce
         /// </summary>
-        public bool Lettuce { get; set; } = true;
+        public override bool Lettuce { get; set; } = true;
         /// <summary>
         /// If the Texas Triple Burger is served with mayo
         /// </summary>
-        public bool Mayo { get; set; } = true;
+        public override bool Mayo { get; set; } = true;
         /// <summary>
         /// If the Texas Triple Burger is served with bacon
         /// </summary>
-        public bool Bacon { get; set; } = true;
+        public override bool Bacon { get; set; } = true;
         /// <summary>
         /// If the Texas Triple Burger is served with egg
         /// </summary>
-        public bool Egg { get; set; } = true;
+        public override bool Egg { get; set; } = true;
         /// <summary>
         /// The price of the Texas Triple Burger
         /// </summary>
-        public double Price
+        public override double Price
         {
             get { return 6.45; }
         }
         /// <summary>
         /// The calories within the Texas Triple Burger
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get { return 698; }
         }
         /// <summary>
         /// The special instructions for the Texas Triple Burger
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
@@ -95,5 +96,8 @@ namespace CowboyCafe.Data
             }
 
         }
+        
+
+
     }
 }

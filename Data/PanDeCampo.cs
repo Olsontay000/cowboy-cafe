@@ -2,9 +2,9 @@
 
 * Author: Taylor Olson
 
-* Class name: ChiliCheeseFries.cs
+* Class name: PanDeCampo.cs
 
-* Purpose: The attributes for the side item "Chili Cheese Fries"
+* Purpose: The attributes for the menu item "Pan de Campo"
 
 */
 using System;
@@ -14,25 +14,25 @@ using System.Text;
 namespace CowboyCafe.Data
 {
     /// <summary>
-    /// The class representing a Chili Cheese Fries side
+    /// The class representing a Pan De Campo side
     /// </summary>
-    public class ChiliCheeseFries : Side
+    public class PanDeCampo : Side
     {
         /// <summary>
-        /// Set value for calories of Chili Cheese Fries depending on size
+        /// Set value for calories of Pan de Campo depending on size
         /// </summary>
         public override uint Calories
         {
             get
             {
-                switch(Size)
+                switch (Size)
                 {
                     case Size.Large:
-                        return 610;
+                        return 367;
                     case Size.Medium:
-                        return 524;
+                        return 269;
                     case Size.Small:
-                        return 433;
+                        return 227;
                     default:
                         throw new NotImplementedException("Unknown size");
                 }
@@ -40,7 +40,7 @@ namespace CowboyCafe.Data
         }
 
         /// <summary>
-        /// Set value for price of Chili Cheese Fries depending on size
+        /// Set value for price of Pan de Campo depending on size
         /// </summary>
         public override double Price
         {
@@ -49,11 +49,11 @@ namespace CowboyCafe.Data
                 switch (Size)
                 {
                     case Size.Large:
-                        return 3.99;
-                    case Size.Medium:
-                        return 2.99;
-                    case Size.Small:
                         return 1.99;
+                    case Size.Medium:
+                        return 1.79;
+                    case Size.Small:
+                        return 1.59;
                     default:
                         throw new NotImplementedException("Unknown size");
                 }

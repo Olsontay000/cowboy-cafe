@@ -16,46 +16,46 @@ namespace CowboyCafe.Data
     /// <summary>
     /// The class representing the Trail Burger entree 
     /// </summary>
-    public class TrailBurger
+    public class TrailBurger : Entree
     {
         /// <summary>
         /// If the Trail Burger is served with bun
         /// </summary>
-        public bool Bun { get; set; } = true;
+        public override bool Bun { get; set; } = true;
         /// <summary>
         /// If the Trail Burger is served with ketchup
         /// </summary>
-        public bool Ketchup { get; set; } = true;
+        public override bool Ketchup { get; set; } = true;
         /// <summary>
         /// If the Trail Burger is served with mustard
         /// </summary>
-        public bool Mustard { get; set; } = true;
+        public override bool Mustard { get; set; } = true;
         /// <summary>
         /// If the Trail Burger is served with pickle
         /// </summary>
-        public bool Pickle { get; set; } = true;
+        public override bool Pickle { get; set; } = true;
         /// <summary>
         /// If the Trail Burger is served with cheese
         /// </summary>
-        public bool Cheese { get; set; } = true;
+        public override bool Cheese { get; set; } = true;
         /// <summary>
         /// The price of the Trail Burger
         /// </summary>
-        public double Price
+        public override double Price
         {
             get { return 4.50; }
         }
         /// <summary>
         /// The calories within the Trail Burger
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get { return 288; }
         }
         /// <summary>
         /// The special instructions for the Trail Burger
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

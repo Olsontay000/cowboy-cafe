@@ -16,58 +16,58 @@ namespace CowboyCafe.Data
     /// <summary>
     /// A class representing the Dakota Dobule Burger entree
     /// </summary>
-    public class DakotaDoubleBurger
+    public class DakotaDoubleBurger : Entree
     {
         /// <summary>
         /// If the Dakota Double Burger is served with bun
         /// </summary>
-        public bool Bun { get; set; } = true;
+        public override bool Bun { get; set; } = true;
         /// <summary>
         /// If the Dakota Double Burger is served with ketchup
         /// </summary>
-        public bool Ketchup { get; set; } = true;
+        public override bool Ketchup { get; set; } = true;
         /// <summary>
         /// If the Dakota Double Burger is served with mustard
         /// </summary>
-        public bool Mustard { get; set; } = true;
+        public override bool Mustard { get; set; } = true;
         /// <summary>
         /// If the Dakota Double Burger is served with pickle
         /// </summary>
-        public bool Pickle { get; set; } = true;
+        public override bool Pickle { get; set; } = true;
         /// <summary>
         /// If the Dakota Double Burger is served with cheese
         /// </summary>
-        public bool Cheese { get; set; } = true;
+        public override bool Cheese { get; set; } = true;
         /// <summary>
         /// If the Dakota Double Burger is served with tomato
         /// </summary>
-        public bool Tomato { get; set; } = true;
+        public override bool Tomato { get; set; } = true;
         /// <summary>
         /// If the Dakota Double Burger is served with lettuce
         /// </summary>
-        public bool Lettuce { get; set; } = true;
+        public override bool Lettuce { get; set; } = true;
         /// <summary>
         /// If the Dakota Double Burger is served with mayo
         /// </summary>
-        public bool Mayo { get; set; } = true;
+        public override bool Mayo { get; set; } = true;
         /// <summary>
         /// The price of the Dakota Double Burger
         /// </summary>
-        public double Price
+        public override double Price
         {
             get { return 5.20; }
         }
         /// <summary>
         /// The calories within the Dakota Double Burger
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get { return 464; }
         }
         /// <summary>
         /// The special instructions for the Dakota Double Burger
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

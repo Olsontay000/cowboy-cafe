@@ -15,6 +15,9 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
+    /// <summary>
+    /// The enum that holds size values, small, medium, large
+    /// </summary>
     public enum Size
     {
         Small,
