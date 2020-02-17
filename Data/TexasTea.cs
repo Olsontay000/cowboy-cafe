@@ -1,11 +1,26 @@
-﻿using System;
+﻿/*
+
+* Author: Taylor Olson
+
+* Class name: TexasTea.cs
+
+* Purpose: The attributes for the menu item "Texas Tea"
+
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CowboyCafe.Data
 {
+    /// <summary>
+    /// A class representing the Texas Tea drink, inheriting the "Drink.cs" base class
+    /// </summary>
     public class TexasTea : Drink
     {
+        /// <summary>
+        /// The price of the tea
+        /// </summary>
         public override double Price
         {
             get
@@ -23,6 +38,9 @@ namespace CowboyCafe.Data
                 }
             }
         }
+        /// <summary>
+        /// The calories of the tea, sweetner halfs the calories
+        /// </summary>
         public override uint Calories
         {
             get
@@ -43,8 +61,17 @@ namespace CowboyCafe.Data
                 }
             }
         }
+        /// <summary>
+        /// If the tea contains sweetner, default is true
+        /// </summary>
         public bool Sweet { get; set; } = true;
+        /// <summary>
+        /// If the tea contains lemon, default is false
+        /// </summary>
         public bool Lemon { get; set; } = false;
+        /// <summary>
+        /// Special instructions for the preparation of the tea
+        /// </summary>
         public override List<string> SpecialInstructions
         {
             get

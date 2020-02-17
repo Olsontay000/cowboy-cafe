@@ -1,12 +1,26 @@
-﻿using System;
+﻿/*
+
+* Author: Taylor Olson
+
+* Class name: CowboyCoffee.cs
+
+* Purpose: The attributes for the menu item "Cowboy Coffee"
+
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CowboyCafe.Data
 {
+    /// <summary>
+    /// A class representing the Cowboy Coffee drink, inheriting the "Drink.cs" base class
+    /// </summary>
     public class CowboyCoffee : Drink
     {
-
+        /// <summary>
+        /// The price of the coffee
+        /// </summary>
         public override double Price
         {
             get
@@ -24,6 +38,9 @@ namespace CowboyCafe.Data
                 }
             }
         }
+        /// <summary>
+        /// The calories of the coffee
+        /// </summary>
         public override uint Calories
         {
             get
@@ -41,9 +58,21 @@ namespace CowboyCafe.Data
                 }
             }
         }
+        /// <summary>
+        /// If the coffee contains ice, default is false
+        /// </summary>
         public override bool Ice {get; set;} = false;
+        /// <summary>
+        /// If the coffee is decaf, no default
+        /// </summary>
         public bool Decaf { get; set; }
+        /// <summary>
+        /// If the coffee has room for cream, default is false
+        /// </summary>
         public bool RoomForCream { get; set; } = false;
+        /// <summary>
+        /// Special instructions for the preparation of the coffee
+        /// </summary>
         public override List<string> SpecialInstructions
         {
             get

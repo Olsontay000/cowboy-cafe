@@ -1,11 +1,26 @@
-﻿using System;
+﻿/*
+
+* Author: Taylor Olson
+
+* Class name: Water.cs
+
+* Purpose: The attributes for the menu item "Water"
+
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CowboyCafe.Data
 {
+    /// <summary>
+    /// A class representing the Water drink, inheriting the "Drink.cs" base class
+    /// </summary>
     public class Water : Drink
     {
+        /// <summary>
+        /// The price of water, $0.12 for all sizes
+        /// </summary>
         public override double Price
         {
             get
@@ -17,6 +32,9 @@ namespace CowboyCafe.Data
                 }
             }
         }
+        /// <summary>
+        /// There are no calories for water in any size
+        /// </summary>
         public override uint Calories
         {
             get
@@ -28,7 +46,13 @@ namespace CowboyCafe.Data
                 }
             }
         }
+        /// <summary>
+        /// If the water has a lemon in it, default is false
+        /// </summary>
         public bool Lemon { get; set; } = false;
+        /// <summary>
+        /// Special instructions for the preparation of the water
+        /// </summary>
         public override List<string> SpecialInstructions
         {
             get

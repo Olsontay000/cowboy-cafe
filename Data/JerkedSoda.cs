@@ -1,11 +1,26 @@
-﻿using System;
+﻿/*
+
+* Author: Taylor Olson
+
+* Class name: JerkedSoda.cs
+
+* Purpose: The attributes for the menu item "Jerked Soda"
+
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CowboyCafe.Data
 {
+    /// <summary>
+    /// A class representing the Jerked Soda drink, inheriting the "Drink.cs" base class
+    /// </summary>
     public class JerkedSoda : Drink
     {
+        /// <summary>
+        /// The price of the soda
+        /// </summary>
         public override double Price
         {
             get
@@ -23,6 +38,9 @@ namespace CowboyCafe.Data
                 }
             }
         }
+        /// <summary>
+        /// The calories of the soda
+        /// </summary>
         public override uint Calories
         {
             get
@@ -40,13 +58,19 @@ namespace CowboyCafe.Data
                 }
             }
         }
+        /// <summary>
+        /// Determines what flavor the soda should be, no default
+        /// </summary>
         public SodaFlavor Flavor { get; set; }
+        /// <summary>
+        /// Special instructions to prepare the soda
+        /// </summary>
         public override List<string> SpecialInstructions
         {
             get
             {
                 List<string> instructions = new List<string>();
-                if (!Ice) { instructions.Add("Hold ice"); }
+                if (!Ice) { instructions.Add("Hold Ice"); }
                 return instructions;
             }
         }

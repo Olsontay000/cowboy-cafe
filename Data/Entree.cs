@@ -83,7 +83,7 @@ namespace CowboyCafe.Data
         /// </summary>
         public abstract double Price { get; }
         /// <summary>
-        /// The valories attribute of the entree, set in the specific class
+        /// The calories attribute of the entree, set in the specific class
         /// </summary>
         public abstract uint Calories { get; }
         /// <summary>
