@@ -1,4 +1,5 @@
 ﻿using System;
+using CowboyCafe.Data;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -22,6 +23,21 @@ namespace PointOfSale
         {
             InitializeComponent();
             AddTrailBurgerButton.Height = 90;
+        }
+
+        private void AddTrailBurgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            OrderList.Items.Add(new TrailBurger());
+        }
+
+        private void AddCowpokeChiliButton_Click(object sender, RoutedEventArgs e)
+        {
+            OrderList.Items.Add(new CowpokeChili());
+        }
+
+        private void AddAngryChicken_Click(object sender, RoutedEventArgs e)
+        {
+            OrderList.Items.Add(new AngryChicken());
         }
     }
 }

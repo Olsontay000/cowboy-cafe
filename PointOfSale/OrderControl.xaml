@@ -21,14 +21,23 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0">
             <TextBlock TextAlignment="Center">Entree</TextBlock>
-            <Button FontSize="3">Cowpoke Chili</Button>
-            <Button Name="AddTrailBurgerButton">Trail Burger</Button>
-            <Button>Angry Chicken</Button>
+            <Button x:Name="AddAngryChicken" Click="AddAngryChicken_Click">Angry Chicken</Button>
+            
+            <Button x:Name="AddCowpokeChili"  Click="AddCowpokeChiliButton_Click">Cowpoke Chili</Button>
+            <Button Name="AddTrailBurgerButton" Click="AddTrailBurgerButton_Click">Trail Burger</Button>
+            
         </StackPanel>
         
         <StackPanel Grid.Column="1">
             <TextBlock TextAlignment="Center">Side</TextBlock>
+            <Button>Baked Beans</Button>
             <Button>Chili Cheese Fries</Button>
+            <Button>Corn Dodgers</Button>
+            <Button>Pande Campo</Button>
+        </StackPanel>
+        <StackPanel Grid.Column="3">
+            <TextBlock TextAlignment="Center">Order</TextBlock>
+            <ListBox Name = "OrderList"/>
         </StackPanel>
         
     </Grid>
