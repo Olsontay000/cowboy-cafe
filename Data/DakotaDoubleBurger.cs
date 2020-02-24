@@ -85,5 +85,13 @@ namespace CowboyCafe.Data
             }
 
         }
+        /// <summary>
+        /// Converts the object to a string
+        /// </summary>
+        /// <returns>The string of the menu item, Dakota Double Burger</returns>
+        public override string ToString()
+        {
+            return "Dakota Double Burger";
+        }
     }
 }
