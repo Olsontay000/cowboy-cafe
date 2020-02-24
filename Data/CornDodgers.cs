@@ -65,7 +65,17 @@ namespace CowboyCafe.Data
         /// <returns>The string of the menu item, Corn Dodgers</returns>
         public override string ToString()
         {
-            return "Corn Dodgers";
+            switch (Size)
+            {
+                case Size.Large:
+                    return "Large Corn Dodgers";
+                case Size.Medium:
+                    return "Medium Corn Dodgers";
+                case Size.Small:
+                    return "Small Corn Dodgers";
+                default:
+                    return "Unknown selection";
+            }
         }
     }
 }

@@ -65,7 +65,17 @@ namespace CowboyCafe.Data
         /// <returns>The string of the menu item, Pan De Campo</returns>
         public override string ToString()
         {
-            return "Pan De Campo";
+            switch (Size)
+            {
+                case Size.Large:
+                    return "Large Pan de Campo";
+                case Size.Medium:
+                    return "Medium Pan de Campo";
+                case Size.Small:
+                    return "Small Pan de Campo";
+                default:
+                    return "Unknown selection";
+            }
         }
     }
 }

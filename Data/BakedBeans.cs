@@ -65,7 +65,17 @@ namespace CowboyCafe.Data
         /// <returns>The string of the menu item, Baked Beans</returns>
         public override string ToString()
         {
-            return "Baked Beans";
+            switch (Size)
+            {
+                case Size.Large:
+                    return "Large Baked Beans";
+                case Size.Medium:
+                    return "Medium Baked Beans";
+                case Size.Small:
+                    return "Small Baked Beans";
+                default:
+                    return "Unknown selection";
+            }
         }
     }
 }

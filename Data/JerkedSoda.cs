@@ -80,7 +80,81 @@ namespace CowboyCafe.Data
         /// <returns>The string of the menu item, Jerked Soda</returns>
         public override string ToString()
         {
-            return "Jerked Soda";
+            if (Flavor == SodaFlavor.BirchBeer)
+            {
+                switch (Size)
+                {
+                    case Size.Large:
+                        return "Large Birch Beer Jerked Soda";
+                    case Size.Medium:
+                        return "Medium Birch Beer Jerked Soda";
+                    case Size.Small:
+                        return "Small Birch Beer Jerked Soda";
+                    default:
+                        return "Unknown selection";
+                }
+
+            }
+            else if (Flavor == SodaFlavor.CreamSoda)
+            {
+                switch (Size)
+                {
+                    case Size.Large:
+                        return "Large Cream Soda Jerked Soda";
+                    case Size.Medium:
+                        return "Medium Cream Soda Jerked Soda";
+                    case Size.Small:
+                        return "Small Cream Soda Jerked Soda";
+                    default:
+                        return "Unknown selection";
+                }
+            }
+            else if (Flavor == SodaFlavor.OrangeSoda)
+            {
+                switch (Size)
+                {
+                    case Size.Large:
+                        return "Large Orange Soda Jerked Soda";
+                    case Size.Medium:
+                        return "Medium Orange Soda Jerked Soda";
+                    case Size.Small:
+                        return "Small Orange Soda Jerked Soda";
+                    default:
+                        return "Unknown selection";
+                }
+            }
+            else if (Flavor == SodaFlavor.RootBeer)
+            {
+                switch (Size)
+                {
+                    case Size.Large:
+                        return "Large Root Beer Jerked Soda";
+                    case Size.Medium:
+                        return "Medium Root Beer Jerked Soda";
+                    case Size.Small:
+                        return "Small Root Beer Jerked Soda";
+                    default:
+                        return "Unknown selection";
+                }
+            }
+            else if (Flavor == SodaFlavor.Sarsparilla)
+            {
+                switch (Size)
+                {
+                    case Size.Large:
+                        return "Large Sarsparilla Jerked Soda";
+                    case Size.Medium:
+                        return "Medium Sarsparilla Jerked Soda";
+                    case Size.Small:
+                        return "Small Sarsparilla Jerked Soda";
+                    default:
+                        return "Unknown selection";
+                }
+            }
+            else
+            {
+                return "Unknown Flavor";
+            }
         }
     }
 }

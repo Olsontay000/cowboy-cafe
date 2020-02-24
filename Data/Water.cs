@@ -70,7 +70,17 @@ namespace CowboyCafe.Data
         /// <returns>The string of the menu item, Water</returns>
         public override string ToString()
         {
-            return "Water";
+            switch (Size)
+            {
+                case Size.Large:
+                    return "Large Water";
+                case Size.Medium:
+                    return "Medium Water";
+                case Size.Small:
+                    return "Small Water";
+                default:
+                    return "Unknown selection";
+            }
         }
     }
 }
