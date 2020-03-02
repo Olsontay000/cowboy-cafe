@@ -16,7 +16,7 @@ namespace CowboyCafe.Data
     /// <summary>
     /// An abstract base class representing an entree
     /// </summary>
-    public abstract class Entree
+    public abstract class Entree : IOrderItem
     {
 
 
@@ -89,7 +89,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The special instructions for a given entree, defined in speicfic class using virtual values from above
         /// </summary>
-        public abstract List<string> SpecialInstructions { get; }
+        public abstract IEnumerable<string> SpecialInstructions { get; }
         
 
 

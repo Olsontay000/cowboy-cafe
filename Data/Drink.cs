@@ -16,7 +16,7 @@ namespace CowboyCafe.Data
     /// <summary>
     /// An abstract base class representing a drink
     /// </summary>
-    public abstract class Drink
+    public abstract class Drink : IOrderItem
     {
         public Size Size { get; set; } = Size.Small;
         /// <summary>
@@ -35,7 +35,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The special instructions for a given entree, defined in speicfic class using virtual values from above
         /// </summary>
-        public abstract List<string> SpecialInstructions { get; }
+        public abstract IEnumerable<string> SpecialInstructions { get; }
 
 
 
