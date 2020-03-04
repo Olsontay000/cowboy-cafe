@@ -20,6 +20,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
+using PointOfSale.CustomizationStreams;
+using PointOfSale.ExtensionMethods;
 
 namespace PointOfSale
 {
@@ -55,11 +57,16 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddCowpokeChiliButton_Click(object sender, RoutedEventArgs e)
         {
+            var orderConrol = this.FindAncestor<MainWindow>(); //Change to order control oops
             if (DataContext is Order data)
             {
                 if (sender is Button button)
                 {
-                    data.Add(new CowpokeChili());
+                    var item = new CowpokeChili();
+                    var screen = new CowpokeChiliCustomization();
+                    screen.DataContext = item;
+                    data.Add(item);
+                    orderConrol?.SwapScreen(screen);
                 }
             }
         }
