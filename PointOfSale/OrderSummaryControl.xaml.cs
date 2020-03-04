@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+
+* Author: Taylor Olson
+
+* Class name: OrderSummaryControl.xaml.cs
+
+* Purpose: OrderSummaryControl used to hold the space for the menuitemselection buttons
+
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,6 +27,9 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderSummaryControl : UserControl
     {
+        /// <summary>
+        /// Initializes
+        /// </summary>
         public OrderSummaryControl()
         {
             InitializeComponent();

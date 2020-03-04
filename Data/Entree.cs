@@ -89,7 +89,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The special instructions for a given entree, defined in speicfic class using virtual values from above
         /// </summary>
-        public abstract IEnumerable<string> SpecialInstructions { get; }
+        public abstract List<string> SpecialInstructions { get; }
         
 
 

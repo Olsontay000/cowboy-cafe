@@ -12,7 +12,7 @@ namespace CowboyCafe.DataTests
         {
             public double Price { get; set; }
 
-            public IEnumerable<string> SpecialInstructions { get; set; }
+            public List<string> SpecialInstructions { get; set; }
 
         }
         
@@ -81,7 +81,7 @@ namespace CowboyCafe.DataTests
         }
 
         [Theory]
-        [InlineData ("Price")]
+        [InlineData ("Subtotal")]
         [InlineData ("Items")]
         public void AddingAnItemShouldTriggerPropertyChanged(string propertyName)
         {
@@ -94,7 +94,7 @@ namespace CowboyCafe.DataTests
         }
         
         [Theory]
-        [InlineData("Price")]
+        [InlineData("Subtotal")]
         [InlineData("Items")]
         public void RemovingAnItemShouldTriggerPropertyChanged(string propertyName)
         {

@@ -35,6 +35,7 @@ namespace CowboyCafe.Data
         /// </summary>
         public abstract uint Calories { get; }
 
-        public virtual IEnumerable<string> SpecialInstructions { get; } = new List<string>();
+        public virtual List<string> SpecialInstructions { get; } = new List<string>();
+
     }
 }

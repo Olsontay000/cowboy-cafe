@@ -35,6 +35,7 @@ namespace PointOfSale
         {
             InitializeComponent();
         }
+        
         /// <summary>
         /// Event handler for clicking the Trail Burger button
         /// </summary>
@@ -42,7 +43,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddTrailBurgerButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new TrailBurger());
+         //   OrderList.Items.Add(new TrailBurger());
         }
         /// <summary>
         /// Event handler for clicking the Cowpoke Chili button
@@ -51,7 +52,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddCowpokeChiliButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new CowpokeChili());
+           // OrderList.Items.Add(new CowpokeChili());
         }
         /// <summary>
         /// Event handler for clicking the Angry Chicken button
@@ -60,7 +61,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddAngryChicken_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new AngryChicken());
+            //OrderList.Items.Add(new AngryChicken());
         }
         /// <summary>
         /// Event handler for clicking the Rustler's Ribs button
@@ -69,7 +70,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddRustlersRibs_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new RustlersRibs());
+        //    OrderList.Items.Add(new RustlersRibs());
         }
         /// <summary>
         /// Event handler for clicking the Peco's Pulled Pork button
@@ -78,7 +79,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddPecosPulledPork_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new PecosPulledPork());
+            //   OrderList.Items.Add(new PecosPulledPork());
         }
         /// <summary>
         /// Event handler for clicking the Dakota Double Burger button
@@ -87,7 +88,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddDakotaDoubleBurger_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new DakotaDoubleBurger());
+            //   OrderList.Items.Add(new DakotaDoubleBurger());
         }
         /// <summary>
         /// Event handler for clicking the Texas Triple Burger button
@@ -96,7 +97,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddTexasTripleBurger_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new TexasTripleBurger());
+            //   OrderList.Items.Add(new TexasTripleBurger());
         }
         /// <summary>
         /// Event handler for clicking the Baked Beans button
@@ -105,7 +106,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddBakedBeans_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new BakedBeans());
+            //  OrderList.Items.Add(new BakedBeans());
         }
         /// <summary>
         /// Event handler for clicking the Chili Cheese Fries button
@@ -114,7 +115,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddChiliCheeseFries_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new ChiliCheeseFries());
+            //   OrderList.Items.Add(new ChiliCheeseFries());
         }
         /// <summary>
         /// Event handler for clicking the Corn Dodgers button
@@ -123,7 +124,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddCornDodgers_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new CornDodgers());
+            //  OrderList.Items.Add(new CornDodgers());
         }
         /// <summary>
         /// Event handler for clicking the Pan De Campo button
@@ -132,7 +133,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddPandeCampo_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new PanDeCampo());
+            //  OrderList.Items.Add(new PanDeCampo());
         }
         /// <summary>
         /// Event handler for clicking the Jerked Soda button
@@ -141,7 +142,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddJerkedSoda_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new JerkedSoda());
+            //   OrderList.Items.Add(new JerkedSoda());
         }
         /// <summary>
         /// Event handler for clicking the Texas Tea button
@@ -150,7 +151,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddTexasTea_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new TexasTea());
+            // OrderList.Items.Add(new TexasTea());
         }
         /// <summary>
         /// Event handler for clicking the Cowboy Coffee button
@@ -159,7 +160,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddCowboyCoffee_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new CowboyCoffee());
+            // OrderList.Items.Add(new CowboyCoffee());
         }
         /// <summary>
         /// Event handler for clicking the Water button
@@ -168,7 +169,10 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddWater_Click(object sender, RoutedEventArgs e)
         {
-            OrderList.Items.Add(new Water());
+            // OrderList.Items.Add(new Water());
         }
+
     }
+
+    
 }
