@@ -10,23 +10,47 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// A class representing an AngryChicken entree
     /// </summary>
-    public class AngryChicken : Entree
+    public class AngryChicken : Entree, INotifyPropertyChanged
     {
-        
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private bool bread = true;
+
+        private bool pickle = true;
         /// <summary>
         /// If the AngryChicken is served with bread
         /// </summary>
-        public override bool Bread { get; set; } = true;
+        public override bool Bread
+        {
+            get { return bread; }
+            set
+            {
+                bread = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bread"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
+
         /// <summary>
         /// If the AngryChicken is served with pickle
         /// </summary>
-        public override bool Pickle { get; set; } = true; //auto property declaration (short-hand)
+        public override bool Pickle
+        {
+            get { return pickle; }
+            set
+            {
+                pickle = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pickle"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
         /// <summary>
         /// The price of the AngryChicken
         /// </summary>

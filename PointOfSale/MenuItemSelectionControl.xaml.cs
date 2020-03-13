@@ -20,6 +20,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
+using PointOfSale.CustomizationScreens;
 using PointOfSale.CustomizationStreams;
 using PointOfSale.ExtensionMethods;
 
@@ -77,11 +78,16 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddAngryChicken_Click(object sender, RoutedEventArgs e)
         {
-            if (DataContext is CowboyCafe.Data.Order data)
+            var orderConrol = this.FindAncestor<MainWindow>(); //Change to order control oops
+            if (DataContext is Order data)
             {
                 if (sender is Button button)
                 {
-                    data.Add(new AngryChicken());
+                    var item = new AngryChicken();
+                    var screen = new AngryChickenCustomization();
+                    screen.DataContext = item;
+                    data.Add(item);
+                    orderConrol?.SwapScreen(screen);
                 }
             }
         }

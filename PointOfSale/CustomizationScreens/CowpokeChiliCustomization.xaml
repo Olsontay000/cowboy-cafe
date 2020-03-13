@@ -6,11 +6,17 @@
              xmlns:local="clr-namespace:PointOfSale.CustomizationStreams"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="600">
-    <StackPanel> <!-- Change back to grid potentially?-->
+    <StackPanel>
         <TextBlock FontSize="40">Customize This Chili!</TextBlock>
         <StackPanel>
             <CheckBox IsChecked="{Binding Path=Cheese}"/>
             <TextBlock Text="Cheese"/>
+            <CheckBox IsChecked="{Binding Path=GreenOnions}"/>
+            <TextBlock Text="Green Onions"/>
+            <CheckBox IsChecked="{Binding Path=TortillaStrips}"/>
+            <TextBlock Text="Tortilla Strips"/>
+            <CheckBox IsChecked="{Binding Path=SourCream}"/>
+            <TextBlock Text="Sour Cream"/>
         </StackPanel>
     </StackPanel>
 </UserControl>
