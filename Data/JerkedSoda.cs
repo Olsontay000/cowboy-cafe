@@ -10,14 +10,87 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// A class representing the Jerked Soda drink, inheriting the "Drink.cs" base class
     /// </summary>
-    public class JerkedSoda : Drink
+    public class JerkedSoda : Drink, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+        private bool ice = true;
+        private Size size = Size.Small;
+        private SodaFlavor flavor = SodaFlavor.CreamSoda;
+
+        public override bool Ice
+        {
+            get
+            {
+                return ice;
+            }
+            set
+            {
+                ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
+
+        public override Size Size
+        {
+            get
+            {
+                return this.size;
+            }
+            set
+            {
+                this.size = value;
+
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsSmall"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsMedium"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsLarge"));
+            }
+        }
+        public bool IsSmall
+        {
+            get
+            {
+                return Size == Size.Small;
+            }
+            set
+            {
+                Size = Size.Small;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+        public bool IsMedium
+        {
+            get
+            {
+                return Size == Size.Medium;
+            }
+            set
+            {
+                Size = Size.Medium;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+        public bool IsLarge
+        {
+            get
+            {
+                return Size == Size.Large;
+            }
+            set
+            {
+                Size = Size.Large;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+
         /// <summary>
         /// The price of the soda
         /// </summary>
@@ -61,7 +134,82 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Determines what flavor the soda should be, no default
         /// </summary>
-        public SodaFlavor Flavor { get; set; }
+        public SodaFlavor Flavor
+        {
+            get
+            {
+                return this.flavor;
+            }
+            set
+            {
+                this.flavor = value;
+
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SodaFlavor"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsBirchBeer"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsCreamSoda"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsOrangeSoda"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsRootBeer"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsSarsparilla"));
+            }
+        }
+
+        public bool IsBirchBeer
+        {
+            get
+            {
+                return Flavor == SodaFlavor.BirchBeer;
+            }
+            set
+            {
+                Flavor = SodaFlavor.BirchBeer;
+            }
+        }
+        public bool IsCreamSoda
+        {
+            get
+            {
+                return Flavor == SodaFlavor.CreamSoda;
+            }
+            set
+            {
+                Flavor = SodaFlavor.CreamSoda;
+            }
+        }
+        public bool IsOrangeSoda
+        {
+            get
+            {
+                return Flavor == SodaFlavor.OrangeSoda;
+            }
+            set
+            {
+                Flavor = SodaFlavor.OrangeSoda;
+            }
+        }
+
+        public bool IsRootBeer
+        {
+            get
+            {
+                return Flavor == SodaFlavor.RootBeer;
+            }
+            set
+            {
+                Flavor = SodaFlavor.RootBeer;
+            }
+        }
+        public bool IsSarsparilla
+        {
+            get
+            {
+                return Flavor == SodaFlavor.Sarsparilla;
+            }
+            set
+            {
+                Flavor = SodaFlavor.Sarsparilla;
+            }
+        }
+        
         /// <summary>
         /// Special instructions to prepare the soda
         /// </summary>

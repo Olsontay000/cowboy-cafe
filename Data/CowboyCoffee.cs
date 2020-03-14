@@ -10,14 +10,74 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// A class representing the Cowboy Coffee drink, inheriting the "Drink.cs" base class
     /// </summary>
-    public class CowboyCoffee : Drink
+    public class CowboyCoffee : Drink, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+        private bool ice = false;
+        private bool cream = false;
+        private bool decaf = false;
+        private Size size = Size.Small;
+
+        public override Size Size
+        {
+            get
+            {
+                return this.size;
+            }
+            set
+            {
+                this.size = value;
+
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsSmall"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsMedium"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsLarge"));
+            }
+        }
+        public bool IsSmall
+        {
+            get
+            {
+                return Size == Size.Small;
+            }
+            set
+            {
+                Size = Size.Small;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+        public bool IsMedium
+        {
+            get
+            {
+                return Size == Size.Medium;
+            }
+            set
+            {
+                Size = Size.Medium;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+        public bool IsLarge
+        {
+            get
+            {
+                return Size == Size.Large;
+            }
+            set
+            {
+                Size = Size.Large;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+
         /// <summary>
         /// The price of the coffee
         /// </summary>
@@ -61,15 +121,51 @@ namespace CowboyCafe.Data
         /// <summary>
         /// If the coffee contains ice, default is false
         /// </summary>
-        public override bool Ice {get; set;} = false;
+        public override bool Ice
+        {
+            get
+            {
+                return ice;
+            }
+            set
+            {
+                ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
         /// <summary>
-        /// If the coffee is decaf, no default
+        /// If the coffee is decaf, false is default
         /// </summary>
-        public bool Decaf { get; set; }
+        public bool Decaf
+        {
+            get
+            {
+                return decaf;
+            }
+            set
+            {
+                decaf = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Decaf"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
         /// <summary>
         /// If the coffee has room for cream, default is false
         /// </summary>
-        public bool RoomForCream { get; set; } = false;
+        public bool RoomForCream
+        {
+            get
+            {
+                return cream;
+            }
+            set
+            {
+                cream = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("RoomForCream"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
         /// <summary>
         /// Special instructions for the preparation of the coffee
         /// </summary>
@@ -78,6 +174,7 @@ namespace CowboyCafe.Data
             get
             {
                 List<string> instructions = new List<string>();
+                if (Decaf) { instructions.Add("Decaf"); }
                 if (Ice) { instructions.Add("Add Ice"); }
                 if(RoomForCream) { instructions.Add("Room for Cream"); }
                 return instructions;

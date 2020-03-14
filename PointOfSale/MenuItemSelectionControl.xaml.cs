@@ -258,11 +258,16 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddJerkedSoda_Click(object sender, RoutedEventArgs e)
         {
+            var orderConrol = this.FindAncestor<MainWindow>(); //Change to order control oops
             if (DataContext is Order data)
             {
                 if (sender is Button button)
                 {
-                    data.Add(new JerkedSoda());
+                    var item = new JerkedSoda();
+                    var screen = new JerkedSodaCustomization();
+                    screen.DataContext = item;
+                    data.Add(item);
+                    orderConrol?.SwapScreen(screen);
                 }
             }
         }
@@ -273,11 +278,16 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddTexasTea_Click(object sender, RoutedEventArgs e)
         {
+            var orderConrol = this.FindAncestor<MainWindow>(); //Change to order control oops
             if (DataContext is Order data)
             {
                 if (sender is Button button)
                 {
-                    data.Add(new TexasTea());
+                    var item = new TexasTea();
+                    var screen = new TexasTeaCustomization();
+                    screen.DataContext = item;
+                    data.Add(item);
+                    orderConrol?.SwapScreen(screen);
                 }
             }
         }
@@ -288,11 +298,16 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddCowboyCoffee_Click(object sender, RoutedEventArgs e)
         {
+            var orderConrol = this.FindAncestor<MainWindow>(); //Change to order control oops
             if (DataContext is Order data)
             {
                 if (sender is Button button)
                 {
-                    data.Add(new CowboyCoffee());
+                    var item = new CowboyCoffee();
+                    var screen = new CowboyCoffeeCustomization();
+                    screen.DataContext = item;
+                    data.Add(item);
+                    orderConrol?.SwapScreen(screen);
                 }
             }
         }
@@ -303,11 +318,16 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddWater_Click(object sender, RoutedEventArgs e)
         {
+            var orderConrol = this.FindAncestor<MainWindow>(); //Change to order control oops
             if (DataContext is Order data)
             {
                 if (sender is Button button)
                 {
-                    data.Add(new Water());
+                    var item = new Water();
+                    var screen = new WaterCustomization();
+                    screen.DataContext = item;
+                    data.Add(item);
+                    orderConrol?.SwapScreen(screen);
                 }
             }
         }

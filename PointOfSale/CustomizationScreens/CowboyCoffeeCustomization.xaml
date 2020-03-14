@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="PointOfSale.CustomizationScreens.CowboyCoffeeCustomization"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PointOfSale.CustomizationScreens"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="36" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">Customize This Cowboy Coffee!</TextBlock>
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <TextBlock FontSize="20">Choose a size:</TextBlock>
+            <TextBlock/>
+
+            <RadioButton GroupName="Size" Content="Small" Name="Small" IsChecked="{Binding Path=IsSmall}">
+
+            </RadioButton>
+            <TextBlock/>
+
+            <RadioButton GroupName="Size" Content="Medium" Name="Medium" IsChecked="{Binding Path=IsMedium}">
+
+            </RadioButton>
+            <TextBlock/>
+
+            <RadioButton GroupName="Size" Content="Large" Name="Large" IsChecked="{Binding Path=IsLarge}">
+
+            </RadioButton>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <TextBlock FontSize="20">Special Instructions:</TextBlock>
+            <TextBlock/>
+            <CheckBox IsChecked="{Binding Path=Ice}"/>
+            <TextBlock Text="Ice"/>
+            <CheckBox IsChecked="{Binding Path=Decaf}"/>
+            <TextBlock Text="Decaf"/>
+            <CheckBox IsChecked="{Binding Path=RoomForCream}"/>
+            <TextBlock Text="Creamer"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

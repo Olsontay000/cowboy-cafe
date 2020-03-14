@@ -18,7 +18,7 @@ namespace CowboyCafe.Data
     /// </summary>
     public abstract class Drink : IOrderItem
     {
-        public Size Size { get; set; } = Size.Small;
+        public virtual Size Size { get; set; } = Size.Small;
         /// <summary>
         /// The price attribute of the drink, set in the specific class
         /// </summary>
