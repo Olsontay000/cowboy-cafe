@@ -10,14 +10,72 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// The class representing a Chili Cheese Fries side
     /// </summary>
-    public class ChiliCheeseFries : Side
+    public class ChiliCheeseFries : Side, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private Size size = Size.Small;
+
+        public override Size Size
+        {
+            get
+            {
+                return this.size;
+            }
+            set
+            {
+                this.size = value;
+
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsSmall"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsMedium"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsLarge"));
+            }
+        }
+        public override bool IsSmall
+        {
+            get
+            {
+                return Size == Size.Small;
+            }
+            set
+            {
+                Size = Size.Small;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+        public override bool IsMedium
+        {
+            get
+            {
+                return Size == Size.Medium;
+            }
+            set
+            {
+                Size = Size.Medium;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+        public override bool IsLarge
+        {
+            get
+            {
+                return Size == Size.Large;
+            }
+            set
+            {
+                Size = Size.Large;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+
         /// <summary>
         /// Set value for calories of Chili Cheese Fries depending on size
         /// </summary>
@@ -58,6 +116,12 @@ namespace CowboyCafe.Data
                         throw new NotImplementedException("Unknown size");
                 }
             }
+            // set
+           // {
+                //price = value;
+                //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+           // }
         }
         /// <summary>
         /// Converts the object to a string

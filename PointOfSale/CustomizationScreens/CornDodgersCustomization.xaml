@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="PointOfSale.CustomizationScreens.CornDodgersCustomization"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PointOfSale.CustomizationScreens"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="600">
+    <StackPanel>
+        <TextBlock FontSize="36">Customize These Dodgers!</TextBlock>
+        <StackPanel>
+            <TextBlock FontSize="20">Choose a size:</TextBlock>
+            <TextBlock/>
+
+            <RadioButton Content="Small" Name="Small" IsChecked="{Binding Path=IsSmall}">
+
+            </RadioButton>
+            <TextBlock/>
+
+            <RadioButton Content="Medium" Name="Medium" IsChecked="{Binding Path=IsMedium}">
+
+            </RadioButton>
+            <TextBlock/>
+
+            <RadioButton Content="Large" Name="Large" IsChecked="{Binding Path=IsLarge}">
+
+            </RadioButton>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

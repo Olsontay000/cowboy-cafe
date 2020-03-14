@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="PointOfSale.CustomizationScreens.AngryChickenCustomization"
+﻿<UserControl x:Class="PointOfSale.CustomizationScreens.PecosPulledPorkCustomization"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="600">
     <StackPanel>
-        <TextBlock FontSize="36">Customize This Chicken Sandwich!</TextBlock>
+        <TextBlock FontSize="40">Customize This Pulled Pork!</TextBlock>
         <StackPanel>
             <CheckBox IsChecked="{Binding Path=Bread}"/>
             <TextBlock Text="Bread"/>

@@ -30,6 +30,12 @@ namespace CowboyCafe.Data
         /// </summary>
         public abstract double Price { get; }
 
+        public abstract bool IsSmall { get; set; }
+
+        public abstract bool IsMedium { get; set; }
+
+        public abstract bool IsLarge { get; set; }
+
         /// <summary>
         /// Gets the calories of the entree
         /// </summary>

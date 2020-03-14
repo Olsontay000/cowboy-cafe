@@ -10,34 +10,87 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
     /// <summary>
     /// The class representing the Trail Burger entree 
     /// </summary>
-    public class TrailBurger : Entree
+    public class TrailBurger : Entree, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private bool bun = true;
+        private bool ketchup = true;
+        private bool mustard = true;
+        private bool pickle = true;
+        private bool cheese = true;
         /// <summary>
         /// If the Trail Burger is served with bun
         /// </summary>
-        public override bool Bun { get; set; } = true;
+        public override bool Bun
+        {
+            get { return bun; }
+            set
+            {
+                bun = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bun"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
         /// <summary>
         /// If the Trail Burger is served with ketchup
         /// </summary>
-        public override bool Ketchup { get; set; } = true;
+        public override bool Ketchup
+        {
+            get { return ketchup; }
+            set
+            {
+                ketchup = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ketchup"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
         /// <summary>
         /// If the Trail Burger is served with mustard
         /// </summary>
-        public override bool Mustard { get; set; } = true;
+        public override bool Mustard
+        {
+            get { return mustard; }
+            set
+            {
+                mustard = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Mustard"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
         /// <summary>
         /// If the Trail Burger is served with pickle
         /// </summary>
-        public override bool Pickle { get; set; } = true;
+        public override bool Pickle
+        {
+            get { return pickle; }
+            set
+            {
+                pickle = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pickle"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
         /// <summary>
         /// If the Trail Burger is served with cheese
         /// </summary>
-        public override bool Cheese { get; set; } = true;
+        public override bool Cheese
+        {
+            get { return cheese; }
+            set
+            {
+                cheese = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Cheese"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
         /// <summary>
         /// The price of the Trail Burger
         /// </summary>
