@@ -24,6 +24,9 @@ namespace CowboyCafe.Data
         private bool ice = true;
         private Size size = Size.Small;
 
+        /// <summary>
+        /// Constructor for size that also updates INotifyProperty
+        /// </summary>
         public override Size Size
         {
             get
@@ -40,6 +43,9 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsLarge"));
             }
         }
+        /// <summary>
+        /// Constructor if the size small is selected
+        /// </summary>
         public bool IsSmall
         {
             get
@@ -52,6 +58,9 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
+        /// <summary>
+        /// Constructor is the size medium is selected
+        /// </summary>
         public bool IsMedium
         {
             get
@@ -64,6 +73,9 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
+        /// <summary>
+        /// Constructor if the size large is selected
+        /// </summary>
         public bool IsLarge
         {
             get
@@ -105,7 +117,9 @@ namespace CowboyCafe.Data
                 }
             }
         }
-
+        /// <summary>
+        /// Ice constructor
+        /// </summary>
         public override bool Ice
         {
             get

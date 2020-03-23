@@ -29,11 +29,17 @@ namespace CowboyCafe.Data
         /// Gets the price of the side
         /// </summary>
         public abstract double Price { get; }
-
+        /// <summary>
+        /// Tells if small is selected
+        /// </summary>
         public abstract bool IsSmall { get; set; }
-
+        /// <summary>
+        /// Tells if medium is selected
+        /// </summary>
         public abstract bool IsMedium { get; set; }
-
+        /// <summary>
+        /// Tells is large is selected
+        /// </summary>
         public abstract bool IsLarge { get; set; }
 
         /// <summary>

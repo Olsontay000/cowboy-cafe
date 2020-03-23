@@ -70,7 +70,10 @@ namespace PointOfSale
         {
             Container.Child = new MenuItemSelectionControl();
         }
-
+        /// <summary>
+        /// Swaps the screen with the item customization screen
+        /// </summary>
+        /// <param name="element"></param>
         public void SwapScreen(FrameworkElement element)
         {
             Container.Child = element;

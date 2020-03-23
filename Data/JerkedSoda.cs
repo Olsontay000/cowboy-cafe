@@ -24,6 +24,9 @@ namespace CowboyCafe.Data
         private Size size = Size.Small;
         private SodaFlavor flavor = SodaFlavor.CreamSoda;
 
+        /// <summary>
+        /// Constructor for ice
+        /// </summary>
         public override bool Ice
         {
             get
@@ -38,6 +41,9 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Constructor for size that also updates INotifyProperty
+        /// </summary>
         public override Size Size
         {
             get
@@ -54,6 +60,9 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsLarge"));
             }
         }
+        /// <summary>
+        /// Constructor if the size small is selected
+        /// </summary>
         public bool IsSmall
         {
             get
@@ -66,6 +75,9 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
+        /// <summary>
+        /// Constructor is the size medium is selected
+        /// </summary>
         public bool IsMedium
         {
             get
@@ -78,6 +90,9 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
+        /// <summary>
+        /// Constructor if the size large is selected
+        /// </summary>
         public bool IsLarge
         {
             get
@@ -153,6 +168,9 @@ namespace CowboyCafe.Data
             }
         }
 
+        /// <summary>
+        /// Constructor if Birch Beer is selected
+        /// </summary>
         public bool IsBirchBeer
         {
             get
@@ -164,6 +182,9 @@ namespace CowboyCafe.Data
                 Flavor = SodaFlavor.BirchBeer;
             }
         }
+        /// <summary>
+        /// Constructor if cream soda is selected
+        /// </summary>
         public bool IsCreamSoda
         {
             get
@@ -175,6 +196,9 @@ namespace CowboyCafe.Data
                 Flavor = SodaFlavor.CreamSoda;
             }
         }
+        /// <summary>
+        /// Constructor if orange soda is selected
+        /// </summary>
         public bool IsOrangeSoda
         {
             get
@@ -186,7 +210,9 @@ namespace CowboyCafe.Data
                 Flavor = SodaFlavor.OrangeSoda;
             }
         }
-
+        /// <summary>
+        /// Constructor if root beer is selected
+        /// </summary>
         public bool IsRootBeer
         {
             get
@@ -198,6 +224,9 @@ namespace CowboyCafe.Data
                 Flavor = SodaFlavor.RootBeer;
             }
         }
+        /// <summary>
+        /// Constructor if sarsparilla is selected
+        /// </summary>
         public bool IsSarsparilla
         {
             get

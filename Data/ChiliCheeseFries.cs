@@ -23,6 +23,9 @@ namespace CowboyCafe.Data
 
         private Size size = Size.Small;
 
+        /// <summary>
+        /// Constructor for size that also updates INotifyProperty
+        /// </summary>
         public override Size Size
         {
             get
@@ -39,6 +42,9 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("IsLarge"));
             }
         }
+        /// <summary>
+        /// Constructor if the size small is selected
+        /// </summary>
         public override bool IsSmall
         {
             get
@@ -51,6 +57,9 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
+        /// <summary>
+        /// Constructor is the size medium is selected
+        /// </summary>
         public override bool IsMedium
         {
             get
@@ -63,6 +72,9 @@ namespace CowboyCafe.Data
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             }
         }
+        /// <summary>
+        /// Constructor if the size large is selected
+        /// </summary>
         public override bool IsLarge
         {
             get
@@ -116,12 +128,7 @@ namespace CowboyCafe.Data
                         throw new NotImplementedException("Unknown size");
                 }
             }
-            // set
-           // {
-                //price = value;
-                //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
-                //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
-           // }
+          
         }
         /// <summary>
         /// Converts the object to a string
