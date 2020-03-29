@@ -6,43 +6,30 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <UserControl.Resources>
-        <Style TargetType="Button">
-            <Setter Property="Height" Value="50px"/>
-            <Setter Property="FontSize" Value="18"/>
-        </Style>
-    </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0">
-            <TextBlock TextAlignment="Center">Entree</TextBlock>
-            <Button x:Name="AddAngryChicken" Click="AddAngryChicken_Click">Angry Chicken</Button>
-            <Button x:Name="AddCowpokeChili"  Click="AddCowpokeChiliButton_Click">Cowpoke Chili</Button>
-            <Button x:Name="AddTrailBurgerButton" Click="AddTrailBurgerButton_Click">Trail Burger</Button>
-            <Button x:Name="AddRustlersRibs" Click="AddRustlersRibs_Click">Rustler's Ribs</Button>
-            <Button x:Name="AddPecosPulledPork" Click="AddPecosPulledPork_Click">Peco's Pulled Pork</Button>
-            <Button x:Name="AddDakotaDoubleBurger" Click="AddDakotaDoubleBurger_Click">Dakota Double Burger</Button>
-            <Button x:Name="AddTexasTripleBurger" Click="AddTexasTripleBurger_Click">Texas Triple Burger</Button>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="450"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="0" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="ItemSelection" Click="ItemSelection_Click" Grid.Column="0">Item Selection</Button>
+            <Button x:Name="CancelOrder" Click="CancelOrder_Click" Grid.Column="1">Cancel Order</Button>
+            <Button x:Name="CompleteOrder" Click="CompleteOrder_Click" Grid.Column="2">Complete Order</Button>
+        </Grid>
+        <Border Name="Container" Grid.Column="0" Grid.Row="1">
+            <local:MenuItemSelectionControl></local:MenuItemSelectionControl>
+        </Border>
+        <StackPanel Grid.Column="1" Grid.RowSpan="2">
+            <local:OrderSummaryControl Height="480"></local:OrderSummaryControl>
         </StackPanel>
-        
-        <StackPanel Grid.Column="1">
-            <TextBlock TextAlignment="Center">Side</TextBlock>
-            <Button x:Name="AddBakedBeans" Click="AddBakedBeans_Click">Baked Beans</Button>
-            <Button x:Name="AddChiliCheeseFries" Click="AddChiliCheeseFries_Click">Chili Cheese Fries</Button>
-            <Button x:Name="AddCornDodgers" Click="AddCornDodgers_Click">Corn Dodgers</Button>
-            <Button x:Name="AddPandeCampo" Click="AddPandeCampo_Click">Pan De Campo</Button>
-        </StackPanel>
-        <StackPanel Grid.Column ="2">
-            <TextBlock TextAlignment="Center">Drinks</TextBlock>
-            <Button x:Name="AddJerkedSoda" Click="AddJerkedSoda_Click">Jerked Soda</Button>
-            <Button x:Name="AddTexasTea" Click="AddTexasTea_Click">Texas Tea</Button>
-            <Button x:Name="AddCowboyCoffee" Click="AddCowboyCoffee_Click">Cowboy Coffee</Button>
-            <Button x:Name="AddWater" Click="AddWater_Click">Water</Button>
-        </StackPanel>
-        
     </Grid>
 </UserControl>

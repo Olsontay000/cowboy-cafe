@@ -43,7 +43,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddTrailBurgerButton_Click(object sender, RoutedEventArgs e)
         {
-            var orderControl = this.FindAncestor<MainWindow>(); //Change to order control oops
+            var orderControl = this.FindAncestor<OrderControl>(); 
             if (DataContext is Order data)
             {
                 if (sender is Button button)
@@ -63,7 +63,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddCowpokeChiliButton_Click(object sender, RoutedEventArgs e)
         {
-            var orderControl = this.FindAncestor<MainWindow>(); //Change to order control oops
+            var orderControl = this.FindAncestor<OrderControl>(); 
             if (DataContext is Order data)
             {
                 if (sender is Button button)
@@ -83,7 +83,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddAngryChicken_Click(object sender, RoutedEventArgs e)
         {
-            var orderControl = this.FindAncestor<MainWindow>(); //Change to order control oops
+            var orderControl = this.FindAncestor<OrderControl>(); 
             if (DataContext is Order data)
             {
                 if (sender is Button button)
@@ -118,7 +118,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddPecosPulledPork_Click(object sender, RoutedEventArgs e)
         {
-            var orderControl = this.FindAncestor<MainWindow>(); //Change to order control oops
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order data)
             {
                 if (sender is Button button)
@@ -138,7 +138,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddDakotaDoubleBurger_Click(object sender, RoutedEventArgs e)
         {
-            var orderControl = this.FindAncestor<MainWindow>(); //Change to order control oops
+            var orderControl = this.FindAncestor<OrderControl>(); 
             if (DataContext is Order data)
             {
                 if (sender is Button button)
@@ -158,7 +158,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddTexasTripleBurger_Click(object sender, RoutedEventArgs e)
         {
-            var orderControl = this.FindAncestor<MainWindow>(); //Change to order control oops
+            var orderControl = this.FindAncestor<OrderControl>(); 
             if (DataContext is Order data)
             {
                 if (sender is Button button)
@@ -178,7 +178,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddBakedBeans_Click(object sender, RoutedEventArgs e)
         {
-            var orderControl = this.FindAncestor<MainWindow>(); //Change to order control oops
+            var orderControl = this.FindAncestor<OrderControl>(); 
             if (DataContext is Order data)
             {
                 if (sender is Button button)
@@ -198,7 +198,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddChiliCheeseFries_Click(object sender, RoutedEventArgs e)
         {
-            var orderControl = this.FindAncestor<MainWindow>(); //Change to order control oops
+            var orderControl = this.FindAncestor<OrderControl>(); 
             if (DataContext is Order data)
             {
                 if (sender is Button button)
@@ -218,7 +218,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddCornDodgers_Click(object sender, RoutedEventArgs e)
         {
-            var orderControl = this.FindAncestor<MainWindow>(); //Change to order control oops
+            var orderControl = this.FindAncestor<OrderControl>(); 
             if (DataContext is Order data)
             {
                 if (sender is Button button)
@@ -238,7 +238,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddPandeCampo_Click(object sender, RoutedEventArgs e)
         {
-            var orderControl = this.FindAncestor<MainWindow>(); //Change to order control oops
+            var orderControl = this.FindAncestor<OrderControl>(); 
             if (DataContext is Order data)
             {
                 if (sender is Button button)
@@ -258,7 +258,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddJerkedSoda_Click(object sender, RoutedEventArgs e)
         {
-            var orderControl = this.FindAncestor<MainWindow>(); //Change to order control oops
+            var orderControl = this.FindAncestor<OrderControl>(); 
             if (DataContext is Order data)
             {
                 if (sender is Button button)
@@ -278,7 +278,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddTexasTea_Click(object sender, RoutedEventArgs e)
         {
-            var orderControl = this.FindAncestor<MainWindow>(); //Change to order control oops
+            var orderControl = this.FindAncestor<OrderControl>(); 
             if (DataContext is Order data)
             {
                 if (sender is Button button)
@@ -298,7 +298,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddCowboyCoffee_Click(object sender, RoutedEventArgs e)
         {
-            var orderControl = this.FindAncestor<MainWindow>(); //Change to order control oops
+            var orderControl = this.FindAncestor<OrderControl>(); 
             if (DataContext is Order data)
             {
                 if (sender is Button button)
@@ -318,7 +318,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void AddWater_Click(object sender, RoutedEventArgs e)
         {
-            var orderControl = this.FindAncestor<MainWindow>(); //Change to order control oops
+            var orderControl = this.FindAncestor<OrderControl>(); 
             if (DataContext is Order data)
             {
                 if (sender is Button button)

@@ -53,7 +53,7 @@ namespace PointOfSale
 
             if (List.SelectedItem.ToString().Contains("Angry Chicken"))
             {
-                var orderControl = this.FindAncestor<MainWindow>();
+                var orderControl = this.FindAncestor<OrderControl>();
                 var screen = new AngryChickenCustomization();
                 screen.DataContext = List.SelectedItem;
                 orderControl?.SwapScreen(screen);
@@ -61,7 +61,7 @@ namespace PointOfSale
 
             else if (List.SelectedItem.ToString().Contains("Cowpoke Chili"))
             {
-                var orderControl = this.FindAncestor<MainWindow>();
+                var orderControl = this.FindAncestor<OrderControl>();
                 var screen = new CowpokeChiliCustomization();
                 screen.DataContext = List.SelectedItem;
                 orderControl?.SwapScreen(screen);
@@ -69,7 +69,7 @@ namespace PointOfSale
 
             else if (List.SelectedItem.ToString().Contains("Trail Burger"))
             {
-                var orderControl = this.FindAncestor<MainWindow>();
+                var orderControl = this.FindAncestor<OrderControl>();
                 var screen = new TrailBurgerCustomization();
                 screen.DataContext = List.SelectedItem;
                 orderControl?.SwapScreen(screen);
@@ -77,7 +77,7 @@ namespace PointOfSale
 
             else if (List.SelectedItem.ToString().Contains("Pecos Pulled Pork"))
             {
-                var orderControl = this.FindAncestor<MainWindow>();
+                var orderControl = this.FindAncestor<OrderControl>();
                 var screen = new PecosPulledPorkCustomization();
                 screen.DataContext = List.SelectedItem;
                 orderControl?.SwapScreen(screen);
@@ -85,7 +85,7 @@ namespace PointOfSale
 
             else if (List.SelectedItem.ToString().Contains("Dakota Double Burger"))
             {
-                var orderControl = this.FindAncestor<MainWindow>();
+                var orderControl = this.FindAncestor<OrderControl>();
                 var screen = new DakotaDoubleBurgerCustomization();
                 screen.DataContext = List.SelectedItem;
                 orderControl?.SwapScreen(screen);
@@ -93,7 +93,7 @@ namespace PointOfSale
 
             else if (List.SelectedItem.ToString().Contains("Texas Triple Burger"))
             {
-                var orderControl = this.FindAncestor<MainWindow>();
+                var orderControl = this.FindAncestor<OrderControl>();
                 var screen = new TexasTripleBurgerCustomization();
                 screen.DataContext = List.SelectedItem;
                 orderControl?.SwapScreen(screen);
@@ -101,7 +101,7 @@ namespace PointOfSale
 
             else if (List.SelectedItem.ToString().Contains("Baked Beans"))
             {
-                var orderControl = this.FindAncestor<MainWindow>();
+                var orderControl = this.FindAncestor<OrderControl>();
                 var screen = new BakedBeansCustomization();
                 screen.DataContext = List.SelectedItem;
                 orderControl?.SwapScreen(screen);
@@ -109,7 +109,7 @@ namespace PointOfSale
 
             else if (List.SelectedItem.ToString().Contains("Chili Cheese Fries"))
             {
-                var orderControl = this.FindAncestor<MainWindow>();
+                var orderControl = this.FindAncestor<OrderControl>();
                 var screen = new ChiliCheeseFriesCustomization();
                 screen.DataContext = List.SelectedItem;
                 orderControl?.SwapScreen(screen);
@@ -117,7 +117,7 @@ namespace PointOfSale
 
             else if (List.SelectedItem.ToString().Contains("Corn Dodgers"))
             {
-                var orderControl = this.FindAncestor<MainWindow>();
+                var orderControl = this.FindAncestor<OrderControl>();
                 var screen = new CornDodgersCustomization();
                 screen.DataContext = List.SelectedItem;
                 orderControl?.SwapScreen(screen);
@@ -125,7 +125,7 @@ namespace PointOfSale
 
             else if (List.SelectedItem.ToString().Contains("Pan de Campo"))
             {
-                var orderControl = this.FindAncestor<MainWindow>();
+                var orderControl = this.FindAncestor<OrderControl>();
                 var screen = new PanDeCampoCustomization();
                 screen.DataContext = List.SelectedItem;
                 orderControl?.SwapScreen(screen);
@@ -133,7 +133,7 @@ namespace PointOfSale
 
             else if (List.SelectedItem.ToString().Contains("Jerked Soda"))
             {
-                var orderControl = this.FindAncestor<MainWindow>();
+                var orderControl = this.FindAncestor<OrderControl>();
                 var screen = new JerkedSodaCustomization();
                 screen.DataContext = List.SelectedItem;
                 orderControl?.SwapScreen(screen);
@@ -141,7 +141,7 @@ namespace PointOfSale
 
             else if (List.SelectedItem.ToString().Contains("Texas Sweet Tea") | List.SelectedItem.ToString().Contains("Texas Plain Tea"))
             {
-                var orderControl = this.FindAncestor<MainWindow>();
+                var orderControl = this.FindAncestor<OrderControl>();
                 var screen = new TexasTeaCustomization();
                 screen.DataContext = List.SelectedItem;
                 orderControl?.SwapScreen(screen);
@@ -149,7 +149,7 @@ namespace PointOfSale
 
             else if (List.SelectedItem.ToString().Contains("Cowboy Coffee"))
             {
-                var orderControl = this.FindAncestor<MainWindow>();
+                var orderControl = this.FindAncestor<OrderControl>();
                 var screen = new CowboyCoffeeCustomization();
                 screen.DataContext = List.SelectedItem;
                 orderControl?.SwapScreen(screen);
@@ -157,7 +157,7 @@ namespace PointOfSale
 
             else if (List.SelectedItem.ToString().Contains("Water"))
             {
-                var orderControl = this.FindAncestor<MainWindow>();
+                var orderControl = this.FindAncestor<OrderControl>();
                 var screen = new WaterCustomization();
                 screen.DataContext = List.SelectedItem;
                 orderControl?.SwapScreen(screen);
