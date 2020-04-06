@@ -45,6 +45,22 @@ namespace CowboyCafe.Data
         }
 
         /// <summary>
+        /// Total getter that takes all items and adds their prices together with a 16% tax
+        /// </summary>
+        public double Total
+        {
+            get
+            {
+                double subtotal = 0;
+                foreach (IOrderItem item in items)
+                {
+                    subtotal += item.Price;
+                }
+                return subtotal*1.16;
+            }
+        }
+
+        /// <summary>
         /// Because List<T> don't update the inotify, we must make the items list an array
         /// </summary>
         public IEnumerable<IOrderItem> Items

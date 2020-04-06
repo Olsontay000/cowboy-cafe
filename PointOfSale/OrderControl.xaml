@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <Grid Name="EntireGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="1*"/>
@@ -28,7 +28,7 @@
         <Border Name="Container" Grid.Column="0" Grid.Row="1">
             <local:MenuItemSelectionControl></local:MenuItemSelectionControl>
         </Border>
-        <StackPanel Grid.Column="1" Grid.RowSpan="2">
+        <StackPanel Name="OrderList" Grid.Column="1" Grid.RowSpan="2">
             <local:OrderSummaryControl Height="480"></local:OrderSummaryControl>
         </StackPanel>
     </Grid>

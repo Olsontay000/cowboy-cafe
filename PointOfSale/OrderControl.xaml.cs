@@ -57,11 +57,25 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void CompleteOrder_Click(object sender, RoutedEventArgs e)
         {
-            this.DataContext = new Order();
+
+            //this.EntireGrid.Children = new TransactionControl();
+            //TransactionControl transControl = new TransactionControl();
+            //this.Visibility = Visibility.Hidden;
+            //transControl.Show();
+            ItemSelection.Visibility = System.Windows.Visibility.Hidden;
+            CancelOrder.Visibility = System.Windows.Visibility.Hidden;
+            CompleteOrder.Visibility = System.Windows.Visibility.Hidden;
+            OrderList.Visibility = System.Windows.Visibility.Hidden;
+            Container.Child = new TransactionControl();
+            //this.DataContext = new Order();
+            //TransactionControl transcontrol = new TransactionControl();
+            //transcontrol.Content = null;
+            //EntireGrid.Children.Remove(OrderSummaryControl);
+            //EntireGrid.Children.Add(transcontrol.FullGrid);
 
         }
         /// <summary>
-        /// Unused currently
+        /// Swaps to menu item selection cotrols
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
