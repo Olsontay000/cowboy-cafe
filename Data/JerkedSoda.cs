@@ -9,7 +9,6 @@
 */
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel;
 
 namespace CowboyCafe.Data
@@ -240,7 +239,7 @@ namespace CowboyCafe.Data
                 Flavor = SodaFlavor.Sarsparilla;
             }
         }
-        
+
         /// <summary>
         /// Special instructions to prepare the soda
         /// </summary>

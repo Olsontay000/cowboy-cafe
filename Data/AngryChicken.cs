@@ -7,9 +7,7 @@
 * Purpose: The attributes for the menu item "Angry Chicken"
 
 */
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel;
 
 namespace CowboyCafe.Data
@@ -74,8 +72,8 @@ namespace CowboyCafe.Data
             {
                 List<string> instructions = new List<string>();
 
-                if(!Bread) { instructions.Add("hold bread"); }
-                if(!Pickle) { instructions.Add("hold pickle"); }
+                if (!Bread) { instructions.Add("hold bread"); }
+                if (!Pickle) { instructions.Add("hold pickle"); }
 
                 return instructions;
             }

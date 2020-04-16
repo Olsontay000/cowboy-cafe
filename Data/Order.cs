@@ -7,9 +7,7 @@
 * Purpose: The order class used to initialize and update lists of IOrderItems
 
 */
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel;
 
 namespace CowboyCafe.Data
@@ -56,7 +54,7 @@ namespace CowboyCafe.Data
                 {
                     subtotal += item.Price;
                 }
-                return subtotal*1.16;
+                return subtotal * 1.16;
             }
         }
 
@@ -122,7 +120,7 @@ namespace CowboyCafe.Data
         private void OnItemChanged(object sender, PropertyChangedEventArgs e)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
-            if(e.PropertyName == "Price")
+            if (e.PropertyName == "Price")
             {
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
             }

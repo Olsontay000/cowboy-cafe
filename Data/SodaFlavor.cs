@@ -7,9 +7,6 @@
 * Purpose: An enumerator used to hold values of possible flavors of soda
 
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CowboyCafe.Data
 {

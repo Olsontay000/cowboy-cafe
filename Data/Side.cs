@@ -9,9 +9,7 @@
 * Purpose: A class for a Side object and the default values
 
 */
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace CowboyCafe.Data
 {

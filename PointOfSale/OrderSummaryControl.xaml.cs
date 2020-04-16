@@ -7,22 +7,12 @@
 * Purpose: OrderSummaryControl used to hold the space for the menuitemselection buttons
 
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using PointOfSale.ExtensionMethods;
 using CowboyCafe.Data;
 using PointOfSale.CustomizationScreens;
 using PointOfSale.CustomizationStreams;
+using PointOfSale.ExtensionMethods;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace PointOfSale
 {
@@ -46,7 +36,7 @@ namespace PointOfSale
         /// <param name="e">Event args</param>
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(List.SelectedItem == null)
+            if (List.SelectedItem == null)
             {
                 return;
             }

@@ -46,7 +46,7 @@
             </RadioButton>
             <TextBlock/>
 
-            <RadioButton GroupName="Flavor" Content="Cream Soda" Name="CreamSoda" IsChecked="{Binding Path=IsCreamSoda}">
+            <RadioButton GroupName="Flavor" Content="Cream Soda" Name="CreamSoda" IsChecked="{Binding Path=IsCreamSoda}" Checked="CreamSoda_Checked">
 
             </RadioButton>
             <TextBlock/>

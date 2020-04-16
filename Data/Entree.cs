@@ -7,9 +7,7 @@
 * Purpose: The entree class object that holds default values and allows the values to be overriden within the specific entrees
 
 */
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace CowboyCafe.Data
 {
@@ -76,7 +74,7 @@ namespace CowboyCafe.Data
         /// Gets the default value for "Tortilla Strips", can be set
         /// </summary>
         public virtual bool TortillaStrips { get; set; } = true;
-     
+
 
         /// <summary>
         /// The price attribute of the entree, set in the specific class
@@ -90,7 +88,7 @@ namespace CowboyCafe.Data
         /// The special instructions for a given entree, defined in speicfic class using virtual values from above
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
-        
+
 
 
     }

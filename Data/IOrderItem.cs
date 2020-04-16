@@ -7,10 +7,7 @@
 * Purpose: The IOrderItem class file used to initalize the IOrderItem instance
 
 */
-using System;
 using System.Collections.Generic;
-using System.Text;
-using System.ComponentModel;
 
 namespace CowboyCafe.Data
 {
@@ -24,6 +21,10 @@ namespace CowboyCafe.Data
         /// Variable for special instructions
         /// </summary>
         public List<string> SpecialInstructions { get; }
-   
+        /// <summary>
+        /// Variable for calories
+        /// </summary>
+        public uint Calories { get; }
+
     }
 }

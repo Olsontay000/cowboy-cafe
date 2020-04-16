@@ -1,0 +1,101 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Menu";
+}
+
+    <h1 class="cowboy-index">Cowboy Cafe</h1>
+    <p>We at Cowboy Cafe are proud to bring you authentic trail meals from the American West. Shake off the dust on your boots and sake your thirst with one of our old-fashioned hand-jerked sodas. Dip your Pan de Campo into a bowl of beans. Or conquer the the mighty Texas Triple Burger! You’ve had a hard ride - so take it easy with us.</p>
+    
+
+
+    <h2>Entrees:</h2>
+    <div class="menu-item">
+        <ul class="entree-list">
+            @foreach (CowboyCafe.Data.IOrderItem entree in IndexModel.EntreeList)
+            {
+                <li class="entree-description">
+                    <h3 class="entree-name">@entree.ToString()</h3>
+                    <div class="entree-price">
+                        Price: $@entree.Price
+                    </div>
+                    <div class="entree-calories">
+                        Calories: @entree.Calories
+                    </div>
+                    
+                </li>
+            }
+        </ul>
+    </div>
+    <h2>Sides:</h2>
+    <div class="menu-item">
+        <ul class="side-list">
+            @foreach (CowboyCafe.Data.Side side in IndexModel.SideList)
+            {
+            <li class="side-description">
+                <h3 class="side-name">@side.ToString()</h3>
+                <div class="side-small-price">
+                    Price: $@side.Price
+                </div>
+                <div class="side-small-calories">
+                   Calories: @side.Calories
+                </div>
+
+                <div class="side-medium-price">
+                    @Model.SideToMedium(side)
+                    Medium price: $@side.Price
+                </div>
+                <div class="side-medium-calories">
+                   Medium calories: @side.Calories
+                </div>
+
+                <div class="side-large-price">
+                    @Model.SideToLarge(side)
+                    Large price: $@side.Price
+                </div>
+                <div class="side-large-calories">
+                   Large calories: @side.Calories
+                </div>
+
+            </li>
+
+            }
+        </ul>
+    </div>
+    <h2>Drinks:</h2>
+    <div class="menu-item">
+        <ul class="drink-list">
+            @foreach (CowboyCafe.Data.Drink drink in IndexModel.DrinkList)
+                {
+            <li class="drink-description">
+                <h3 class="drink-name">@drink.ToString()</h3>
+                <div class="drink-small-price">
+                    Price: $@drink.Price
+                </div>
+                <div class="drink-small-calories">
+                    Calories: @drink.Calories
+                </div>
+
+                <div class="drink-medium-price">
+                    @Model.DrinkToMedium(drink)
+                    Medium price: $@drink.Price
+                </div>
+                <div class="drink-medium-calories">
+                    Medium calories: @drink.Calories
+                </div>
+
+                <div class="drink-large-price">
+                    @Model.DrinkToLarge(drink)
+                    Large price: $@drink.Price
+                </div>
+                <div class="drink-large-calories">
+                    Large calories: @drink.Calories
+                </div>
+
+
+
+
+            </li>
+                }
+        </ul>
+    </div>

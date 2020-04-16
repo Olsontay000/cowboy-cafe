@@ -9,7 +9,6 @@
 */
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel;
 
 namespace CowboyCafe.Data
@@ -190,7 +189,7 @@ namespace CowboyCafe.Data
                 List<string> instructions = new List<string>();
                 if (Decaf) { instructions.Add("Decaf"); }
                 if (Ice) { instructions.Add("Add Ice"); }
-                if(RoomForCream) { instructions.Add("Room for Cream"); }
+                if (RoomForCream) { instructions.Add("Room for Cream"); }
                 return instructions;
             }
         }
@@ -201,7 +200,7 @@ namespace CowboyCafe.Data
         /// <returns>The string of the menu item, Cowboy Coffee</returns>
         public override string ToString()
         {
-            if(Decaf)
+            if (Decaf)
             {
                 switch (Size)
                 {
@@ -214,7 +213,7 @@ namespace CowboyCafe.Data
                     default:
                         return "Unknown selection";
                 }
-                    
+
             }
             else
             {

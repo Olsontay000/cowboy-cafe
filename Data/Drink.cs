@@ -7,9 +7,7 @@
 * Purpose: The drink class object that holds default values and allows the values to be overriden within the specific drinks
 
 */
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace CowboyCafe.Data
 {
@@ -31,7 +29,7 @@ namespace CowboyCafe.Data
         /// Gets the default value for "Ice", can be set
         /// </summary>
         public virtual bool Ice { get; set; } = true;
-        
+
         /// <summary>
         /// The special instructions for a given entree, defined in speicfic class using virtual values from above
         /// </summary>

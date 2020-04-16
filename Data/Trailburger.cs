@@ -7,9 +7,7 @@
 * Purpose: The attributes for the menu item "Trail Burger"
 
 */
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel;
 
 namespace CowboyCafe.Data

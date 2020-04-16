@@ -7,9 +7,7 @@
 * Purpose: The attributes for the menu item "Dakota Double Burger"
 
 */
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel;
 
 namespace CowboyCafe.Data
@@ -24,15 +22,15 @@ namespace CowboyCafe.Data
         private bool bun = true;
 
         private bool ketchup = true;
-        
+
         private bool mustard = true;
 
         private bool pickle = true;
-        
+
         private bool cheese = true;
 
         private bool tomato = true;
-        
+
         private bool lettuce = true;
 
         private bool mayo = true;

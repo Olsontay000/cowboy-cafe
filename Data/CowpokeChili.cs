@@ -9,7 +9,6 @@
 * Purpose: The attributes for the menu item "Cowpoke Chili"
 
 */
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 
@@ -30,8 +29,8 @@ namespace CowboyCafe.Data
         public override bool Cheese
         {
             get { return cheese; }
-            set 
-            { 
+            set
+            {
                 cheese = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Cheese"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -45,8 +44,8 @@ namespace CowboyCafe.Data
         public override bool SourCream
         {
             get { return sourCream; }
-            set 
-            { 
+            set
+            {
                 sourCream = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SourCream"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -60,8 +59,8 @@ namespace CowboyCafe.Data
         public override bool GreenOnions
         {
             get { return greenOnions; }
-            set 
-            { 
+            set
+            {
                 greenOnions = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("GreenOnions"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
@@ -75,13 +74,13 @@ namespace CowboyCafe.Data
         public override bool TortillaStrips
         {
             get { return tortillaStrips; }
-            set 
+            set
             {
                 tortillaStrips = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("TortillaStrips"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
             }
-        
+
         }
 
         /// <summary>

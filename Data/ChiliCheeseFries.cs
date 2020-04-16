@@ -8,8 +8,6 @@
 
 */
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel;
 
 namespace CowboyCafe.Data
@@ -97,7 +95,7 @@ namespace CowboyCafe.Data
         {
             get
             {
-                switch(Size)
+                switch (Size)
                 {
                     case Size.Large:
                         return 610;
@@ -130,7 +128,7 @@ namespace CowboyCafe.Data
                         throw new NotImplementedException("Unknown size");
                 }
             }
-          
+
         }
         /// <summary>
         /// Converts the object to a string

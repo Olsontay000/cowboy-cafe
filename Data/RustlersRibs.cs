@@ -7,9 +7,7 @@
 * Purpose: The attributes for the menu item "Rustler's Ribs"
 
 */
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace CowboyCafe.Data
 {

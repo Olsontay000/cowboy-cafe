@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using CowboyCafe.Data;
+using System;
 using Xunit;
-using CowboyCafe.Data;
 
 namespace CowboyCafe.DataTests
 {
-    
+
     public class DrinkTests
     {
         [Theory]
@@ -20,6 +18,6 @@ namespace CowboyCafe.DataTests
             Assert.IsAssignableFrom<Drink>(drink);
         }
     }
-    
+
 }
 

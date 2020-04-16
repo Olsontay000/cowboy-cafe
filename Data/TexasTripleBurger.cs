@@ -7,9 +7,7 @@
 * Purpose: The attributes for the menu item "Texas Triple Burger"
 
 */
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel;
 
 
@@ -37,7 +35,7 @@ namespace CowboyCafe.Data
         private bool lettuce = true;
 
         private bool mayo = true;
-        
+
         private bool bacon = true;
 
         private bool egg = true;

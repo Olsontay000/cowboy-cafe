@@ -9,7 +9,6 @@
 */
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel;
 
 namespace CowboyCafe.Data
@@ -206,7 +205,7 @@ namespace CowboyCafe.Data
         /// <returns>The string of the menu item, Texas Tea</returns>
         public override string ToString()
         {
-            if(Sweet)
+            if (Sweet)
             {
                 switch (Size)
                 {

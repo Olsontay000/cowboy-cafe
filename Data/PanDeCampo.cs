@@ -8,8 +8,6 @@
 
 */
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.ComponentModel;
 
 namespace CowboyCafe.Data
@@ -133,9 +131,9 @@ namespace CowboyCafe.Data
             }
             //set
             //{
-                //price = value;
-                //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
-                //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            //price = value;
+            //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+            //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
             //}
         }
         /// <summary>
