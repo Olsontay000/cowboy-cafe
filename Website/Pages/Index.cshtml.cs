@@ -57,47 +57,6 @@ namespace Website.Pages
         [BindProperty]
         public double? PriceMax { get; set; }
 
-        /// <summary>
-        /// Method to force side to medium for calories and price
-        /// </summary>
-        /// <param name="side">The side in its current size</param>
-        /// <returns>String that is null, definitely Cowboy coding but can't find another way to call method without printing</returns>
-        public string SideToMedium(Side side)
-        {
-            side.Size = Size.Medium;
-            return null;
-        }
-        /// <summary>
-        /// Method to force side to large for calories and price
-        /// </summary>
-        /// <param name="side">The side in its current size</param>
-        /// <returns>String that is null, definitely Cowboy coding but can't find another way to call method without printing</returns>
-        public string SideToLarge(Side side)
-        {
-            side.Size = Size.Large;
-            return null;
-        }
-        /// <summary>
-        /// Method to force drink to medium for calories and price
-        /// </summary>
-        /// <param name="side">The drink in its current size</param>
-        /// <returns>String that is null, definitely Cowboy coding but can't find another way to call method without printing</returns>
-        public string DrinkToMedium(Drink drink)
-        {
-            drink.Size = Size.Medium;
-            return null;
-        }
-        /// <summary>
-        /// Method to force drink to large for calories and price
-        /// </summary>
-        /// <param name="side">The drink in its current size</param>
-        /// <returns>String that is null, definitely Cowboy coding but can't find another way to call method without printing</returns>
-        public string DrinkToLarge(Drink drink)
-        {
-            drink.Size = Size.Large;
-            return null;
-        }
-
         public void OnGet()
         {
             Items = Menu.AllItems;
