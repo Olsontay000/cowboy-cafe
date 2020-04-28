@@ -12,6 +12,11 @@ namespace CowboyCafe.DataTests
 
             public List<string> SpecialInstructions { get; set; }
 
+            /// <summary>
+            /// Variable for calories
+            /// </summary>
+            public uint Calories { get; }
+
         }
 
         [Fact]

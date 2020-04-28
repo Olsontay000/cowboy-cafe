@@ -16,16 +16,10 @@ a {
     text-align: center;
 }
 
-
 .entree-description, .side-description, .drink-description {
     margin: 10px;
-
 }
 
-.side-small-calories, .side-medium-calories, .drink-small-calories, .drink-medium-calories {
-    border-bottom: 4px dotted lightgray;
-    
-}
 
 .btn-primary {
   color: #fff;
