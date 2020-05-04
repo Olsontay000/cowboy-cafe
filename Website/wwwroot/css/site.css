@@ -20,6 +20,28 @@ a {
     margin: 10px;
 }
 
+.menu-item{
+    float: left;
+    width: 33%;
+}
+
+.clearfix {
+    clear: both;
+}
+
+
+.jerked-soda-flavors {
+    margin-top: 20px; 
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+@media(max-width: 490px) {
+    .menu-item{
+        float: none;
+        width: 100%;
+    }
+}
 
 .btn-primary {
   color: #fff;

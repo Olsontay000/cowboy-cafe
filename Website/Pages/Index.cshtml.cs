@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
-
+using System.Linq;
 
 namespace Website.Pages
 {
@@ -64,10 +64,64 @@ namespace Website.Pages
 
         public void OnPost()
         {
-            Items = Menu.Search(SearchTerms);
-            Items = Menu.FilterByCategory(Items, Categories);
-            Items = Menu.FilterByCalories(Items, CaloriesMin, CaloriesMax);
-            Items = Menu.FilterByPrice(Items, PriceMin, PriceMax);
+            Items = Menu.AllItems;
+            // Search item names for the searchterms
+            if (SearchTerms != null)
+            {
+                //Items = from item in Items
+                //        where item.ToString().Contains(SearchTerms, System.StringComparison.CurrentCultureIgnoreCase)
+                //        select item;
+                Items = Items.Where(item =>  item.ToString().Contains(SearchTerms, System.StringComparison.CurrentCultureIgnoreCase));
+            }
+
+            if(Categories != null && Categories.Length != 0)
+            {
+                Items = Items.Where(item =>
+                (item is Entree entree && Categories.Contains("Entree")) ||
+                (item is Side side && Categories.Contains("Side")) ||
+                (item is Drink drink && Categories.Contains("Drink"))
+                );
+            }
+
+            if (CaloriesMin != null || CaloriesMax != null)
+            {
+                if (CaloriesMin == null)
+                {
+                    Items = Items.Where(item => item.Calories <= CaloriesMax);
+                }
+
+                else if (CaloriesMax == null)
+                {
+                    Items = Items.Where(item => item.Calories >= CaloriesMin);
+                }
+                else
+                {
+                    Items = Items.Where(item => item.Calories >= CaloriesMin && item.Calories <= CaloriesMax);
+                }
+            }
+
+            if(PriceMin != null || PriceMax != null)
+            {
+                if (PriceMin == null)
+                {
+                    Items = Items.Where(item => item.Price <= PriceMax);
+                }
+
+                else if (PriceMax == null)
+                {
+                    Items = Items.Where(item => item.Price >= PriceMin);
+                }
+                else
+                {
+                    Items = Items.Where(item => item.Price >= PriceMin && item.Price <= PriceMax);
+                }
+            }
+            /*
+             Items = Menu.Search(SearchTerms);
+             Items = Menu.FilterByCategory(Items, Categories);
+             Items = Menu.FilterByCalories(Items, CaloriesMin, CaloriesMax);
+             Items = Menu.FilterByPrice(Items, PriceMin, PriceMax);
+             */
         }
 
         //The method from the data class for entrees

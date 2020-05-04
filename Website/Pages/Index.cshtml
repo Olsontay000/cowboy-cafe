@@ -3,7 +3,9 @@
 @{
     ViewData["Title"] = "Menu";
 }
-
+    <head>
+        <link rel="stylesheet" type="text/css" href="@Url.Content("~/css/site.css")" media="screen" />
+    </head>
     <form id="menu" method="post">
         <h1 class="cowboy-index">Cowboy Cafe</h1>
         <p>We at Cowboy Cafe are proud to bring you authentic trail meals from the American West. Shake off the dust on your boots and sake your thirst with one of our old-fashioned hand-jerked sodas. Dip your Pan de Campo into a bowl of beans. Or conquer the the mighty Texas Triple Burger! You’ve had a hard ride - so take it easy with us.</p>
@@ -36,36 +38,36 @@
                 Between
                 <input name="CaloriesMin" type="number" min="0" max="1000" step="1" placeholder="min" value="@Model.CaloriesMin" />
                 and
-                <input name="CaloriesMax" type="number" min="0" max="1000" step="1" placeholder="max" value="@Model.CaloriesMax"/>
+                <input name="CaloriesMax" type="number" min="0" max="1000" step="1" placeholder="max" value="@Model.CaloriesMax" />
             </div>
 
             <h4>Price</h4>
             <div>
                 Between
-                <input name="PriceMin" type="number" min="0" max="8" step="0.01" placeholder="$0.00" value="@Model.PriceMin"/>
+                <input name="PriceMin" type="number" min="0" max="8" step="0.01" placeholder="$0.00" value="@Model.PriceMin" />
                 and
-                <input name="PriceMax" type="number" min="0" max="8" step="0.01" placeholder="$8.00" value="@Model.PriceMax"/>
+                <input name="PriceMax" type="number" min="0" max="8" step="0.01" placeholder="$8.00" value="@Model.PriceMax" />
             </div>
         </div>
 
-        <h2>Entrees:</h2>
+        <h2 style="padding-top:30px">Entrees:</h2>
         <div class="menu-item">
             <ul class="entree-list">
                 @foreach (CowboyCafe.Data.IOrderItem item in Model.Items)
                 {
-                        @if (item is CowboyCafe.Data.Entree entree)
-                        {
-                            <li class="entree-description">
-                                <h3 class="entree-name">@entree.ToString()</h3>
-                                <div class="entree-price">
-                                    Price: $@entree.Price
-                                </div>
-                                <div class="entree-calories">
-                                    Calories: @entree.Calories
-                                </div>
+                    @if (item is CowboyCafe.Data.Entree entree)
+                    {
+                        <li class="entree-description">
+                            <h3 class="entree-name">@entree.ToString()</h3>
+                            <div class="entree-price">
+                                Price: $@entree.Price
+                            </div>
+                            <div class="entree-calories">
+                                Calories: @entree.Calories
+                            </div>
 
-                            </li>
-                        }
+                        </li>
+                    }
 
                 }
             </ul>
@@ -75,51 +77,70 @@
             <ul class="side-list">
                 @foreach (CowboyCafe.Data.IOrderItem item in Model.Items)
                 {
-                    @if(item is CowboyCafe.Data.Side side)
-                    { 
-                <li class="side-description">
-                    <h3 class="side-name">@side.ToString()</h3>
-                    <div class="side-price">
-                        Price: $@side.Price
-                    </div>
-                    <div class="side-calories">
-                        Calories: @side.Calories
-                    </div>
-                    @if(side.Size == CowboyCafe.Data.Size.Large && Model.CaloriesMin == null && Model.CaloriesMax == null && Model.PriceMin == null && Model.PriceMax == null)
-                        { 
-                        <p id="large-divider">------------------------------------------------------------------------------------------------</p>
-                        //I've spent so much time trying to format ^this, I give up
-                        }
-                </li>
+                    @if (item is CowboyCafe.Data.Side side)
+                    {
+                        <li class="side-description">
+                            <h3 class="side-name">@side.ToString()</h3>
+                            <div class="side-price">
+                                Price: $@side.Price
+                            </div>
+                            <div class="side-calories">
+                                Calories: @side.Calories
+                            </div>
+                            @if (side.Size == CowboyCafe.Data.Size.Large && Model.CaloriesMin == null && Model.CaloriesMax == null && Model.PriceMin == null && Model.PriceMax == null)
+                            {
+                        <p id="large-divider">----------------------</p>
+                                //I've spent so much time trying to format ^this, I give up
+                            }
+                        </li>
                     }
                 }
             </ul>
         </div>
         <h2>Drinks:</h2>
+        <h4 class="jerked-soda-flavors">Jerked Soda Flavors:</h4>
+        <ul class="jerked-soda-flavors">
+            <li>
+                Cream Soda
+            </li>
+            <li>
+                Orange Soda
+            </li>
+            <li>
+                Sarsparilla
+            </li>
+            <li>
+                Birch Beer
+            </li>
+            <li>
+                Root Beer
+            </li>
+        </ul>
         <div class="menu-item">
             <ul class="drink-list">
                 @foreach (CowboyCafe.Data.IOrderItem item in Model.Items)
                 {
-                    @if(item is CowboyCafe.Data.Drink drink)
+                    @if (item is CowboyCafe.Data.Drink drink)
                     {
 
-                <li class="drink-description">
-                    <h3 class="drink-name">@drink.ToString()</h3>
-                    <div class="drink-price">
-                        Price: $@drink.Price
-                    </div>
-                    <div class="drink-calories">
-                        Calories: @drink.Calories
-                    </div>
+                        <li class="drink-description">
+                            <h3 class="drink-name">@drink.ToString()</h3>
+                            <div class="drink-price">
+                                Price: $@drink.Price
+                            </div>
+                            <div class="drink-calories">
+                                Calories: @drink.Calories
+                            </div>
 
-                    @if (drink.Size == CowboyCafe.Data.Size.Large && Model.CaloriesMin == null && Model.CaloriesMax == null && Model.PriceMin == null && Model.PriceMax == null)
-                    {
-                        <p id="large-divider">------------------------------------------------------------------------------------------------</p>
+                            @if (drink.Size == CowboyCafe.Data.Size.Large && Model.CaloriesMin == null && Model.CaloriesMax == null && Model.PriceMin == null && Model.PriceMax == null)
+                            {
+                        <p id="large-divider">----------------------</p>
+                            }
+
+                        </li>
                     }
-
-                </li>
-                     }
                 }
             </ul>
         </div>
+        <div class="clearfix"></div>
     </form>
